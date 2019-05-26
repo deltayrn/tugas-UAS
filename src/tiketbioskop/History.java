@@ -1,6 +1,10 @@
 
 package tiketbioskop;
 
+import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Fani Salamah
@@ -12,6 +16,22 @@ public class History extends javax.swing.JFrame {
      */
     public History() {
         initComponents();
+        this.getData();
+    }
+    
+    private void getData() {
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        Iterator<Transaksi> iter = TiketBioskop.transaksi.iterator();
+        while (iter.hasNext()) {
+            Transaksi next = iter.next();
+            String data1 = next.time.format(dateFormat);
+            String data2 = next.filmName;
+            String data3 = next.showTime;
+            String data4 = next.seats.toString().replace("[", "").replace("]", "");
+            Object[] row = { data1, data2, data3, data4 };
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            model.addRow(row);
+        }
     }
 
     /**
@@ -23,17 +43,44 @@ public class History extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Waktu Beli", "Nama Film", "Jadwal Tayang", "Tempat Duduk"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -75,5 +122,7 @@ public class History extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
