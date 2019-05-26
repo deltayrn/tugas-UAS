@@ -61,6 +61,9 @@ class ShowTime {
     public String getTime() {
         return this.time;
     }
+    public int getPrice() {
+        return this.price;
+    }
 }
 
 class Film {
@@ -87,6 +90,8 @@ class Transaksi {
     public LocalDateTime time;
     public String filmName;
     public String showTime;
+    public int pricePerSeat;
+    public int priceTotal;
     public ArrayList<String> seats;
 }
 

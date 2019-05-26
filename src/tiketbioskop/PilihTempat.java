@@ -520,6 +520,8 @@ public class PilihTempat extends javax.swing.JFrame {
         Transaksi trans = new Transaksi();
         trans.time = LocalDateTime.now();
         trans.filmName = TiketBioskop.filmList.get(this.selectedFilm).getName();
+        trans.pricePerSeat = TiketBioskop.filmList.get(this.selectedFilm).timeList.get(this.selectedTime).getPrice();
+        trans.priceTotal = this.selected.size() * trans.pricePerSeat;
         trans.showTime = TiketBioskop.filmList.get(this.selectedFilm).timeList.get(this.selectedTime).getTime();
         trans.seats = this.selectedSeatName;
         TiketBioskop.transaksi.add(trans);

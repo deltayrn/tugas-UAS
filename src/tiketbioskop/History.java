@@ -28,7 +28,8 @@ public class History extends javax.swing.JFrame {
             String data2 = next.filmName;
             String data3 = next.showTime;
             String data4 = next.seats.toString().replace("[", "").replace("]", "");
-            Object[] row = { data1, data2, data3, data4 };
+            String data5 = new Integer(next.priceTotal).toString();
+            Object[] row = { data1, data2, data3, data4, data5 };
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             model.addRow(row);
         }
@@ -53,11 +54,11 @@ public class History extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Waktu Beli", "Nama Film", "Jadwal Tayang", "Tempat Duduk"
+                "Waktu Beli", "Nama Film", "Jadwal Tayang", "Tempat Duduk", "Total Pembelian"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -72,14 +73,14 @@ public class History extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

@@ -1,5 +1,0 @@
-tiketbioskop.Seat
-tiketbioskop.Transaksi
-tiketbioskop.ShowTime
-tiketbioskop.Film
-tiketbioskop.FilmData
