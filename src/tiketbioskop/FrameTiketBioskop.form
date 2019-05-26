@@ -3,6 +3,10 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[700, 500]"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,40 +27,34 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnf_mumun" min="-2" pref="95" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnf_dilan" min="-2" pref="95" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnf_pikachu" min="-2" pref="95" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="btnf_close" min="-2" pref="92" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_film_one" min="-2" pref="149" max="-2" attributes="0"/>
+                              <Component id="btn_film_four" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnf_avengers" min="-2" pref="95" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnf_hulk" min="-2" pref="95" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnf_spiderman" min="-2" pref="95" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_film_two" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="btn_film_five" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btn_film_three" min="-2" pref="151" max="-2" attributes="0"/>
+                              <Component id="btn_film_six" min="-2" pref="151" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="195" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="536" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="52" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="btnf_close" min="-2" pref="92" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnf_next" min="-2" pref="68" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <EmptySpace pref="53" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,25 +62,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="52" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnf_avengers" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="btnf_hulk" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="btnf_spiderman" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btn_film_two" pref="30" max="32767" attributes="0"/>
+                  <Component id="btn_film_three" max="32767" attributes="0"/>
+                  <Component id="btn_film_one" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnf_mumun" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="btnf_dilan" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
-                  <Component id="btnf_pikachu" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btn_film_four" alignment="1" pref="30" max="32767" attributes="0"/>
+                  <Component id="btn_film_five" alignment="1" max="32767" attributes="0"/>
+                  <Component id="btn_film_six" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnf_next" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnf_close" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="btnf_close" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -97,68 +92,42 @@
         <Property name="text" type="java.lang.String" value="PILIH FILM"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_avengers">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="AVENGERS"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_one">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_avengersActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnf_next">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="NEXT"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_nextActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_oneActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnf_close">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CLOSE"/>
+        <Property name="text" type="java.lang.String" value="Batal"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_closeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_hulk">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="HULK"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_two">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_hulkActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_twoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_spiderman">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="SPIDERMAN"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_three">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_spidermanActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_threeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_dilan">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="DILAN"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_five">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_dilanActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_fiveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_pikachu">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="PIKACHU"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_six">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_pikachuActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_sixActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnf_mumun">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="MUMUN"/>
-      </Properties>
+    <Component class="javax.swing.JButton" name="btn_film_four">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnf_mumunActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_film_fourActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

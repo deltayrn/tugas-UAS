@@ -1,0 +1,4 @@
+tiketbioskop.Seat
+tiketbioskop.ShowTime
+tiketbioskop.Film
+tiketbioskop.FilmData

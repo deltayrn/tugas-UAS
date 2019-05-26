@@ -1,5 +1,7 @@
 package tiketbioskop;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Fani Salamah

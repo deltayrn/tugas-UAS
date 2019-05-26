@@ -6,12 +6,15 @@ package tiketbioskop;
  * @author Fani Salamah
  */
 public class PilihJam extends javax.swing.JFrame {
-
+    int selectedFilm;
+    int selectedTime;
     /**
      * Creates new form PilihJam
      */
-    public PilihJam() {
+    public PilihJam(int film) {
         initComponents();
+        this.selectedFilm = film;
+        this.selectedTime = 0;
     }
 
     /**
@@ -24,23 +27,16 @@ public class PilihJam extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        combo_hari = new javax.swing.JComboBox();
         btnw_next = new javax.swing.JButton();
         btnw_cancel = new javax.swing.JButton();
         combo_jam = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PILIH WAKTU TAYANG");
-
-        combo_hari.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "SENIN", "SELASA", "RABU", "KAMIS", "JUMAT", "SABTU", "MINGGU" }));
-        combo_hari.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                combo_hariActionPerformed(evt);
-            }
-        });
 
         btnw_next.setText("NEXT");
         btnw_next.addActionListener(new java.awt.event.ActionListener() {
@@ -56,12 +52,14 @@ public class PilihJam extends javax.swing.JFrame {
             }
         });
 
-        combo_jam.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10.00 WIB", "12.30 WIB", "15.00 WIB", "18.00 WIB", "20.30 WIB" }));
+        combo_jam.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13.00 WIB", "16.00 WIB", "20.00 WIB" }));
         combo_jam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_jamActionPerformed(evt);
             }
         });
+
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,12 +75,13 @@ public class PilihJam extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
                         .addGap(59, 59, 59))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(combo_hari, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(combo_jam, javax.swing.GroupLayout.Alignment.LEADING, 0, 299, Short.MAX_VALUE))
+                        .addComponent(combo_jam, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -90,11 +89,11 @@ public class PilihJam extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(combo_hari, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(89, 89, 89)
                 .addComponent(combo_jam, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnw_next)
                     .addComponent(btnw_cancel))
@@ -104,13 +103,9 @@ public class PilihJam extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void combo_hariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_hariActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_combo_hariActionPerformed
-
     private void btnw_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnw_nextActionPerformed
         this.setVisible(false);
-        new PilihTempat().setVisible(true);
+        new PilihTempat(this.selectedFilm, this.selectedTime).setVisible(true);
     }//GEN-LAST:event_btnw_nextActionPerformed
 
     private void btnw_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnw_cancelActionPerformed
@@ -120,6 +115,8 @@ public class PilihJam extends javax.swing.JFrame {
 
     private void combo_jamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_jamActionPerformed
         // TODO add your handling code here:
+        this.selectedTime = combo_jam.getSelectedIndex();
+        // jLabel2.setText(Integer.toString(combo_jam.getSelectedIndex()));
     }//GEN-LAST:event_combo_jamActionPerformed
 
     /**
@@ -152,7 +149,7 @@ public class PilihJam extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PilihJam().setVisible(true);
+                new PilihJam(0).setVisible(true);
             }
         });
     }
@@ -160,8 +157,8 @@ public class PilihJam extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnw_cancel;
     private javax.swing.JButton btnw_next;
-    private javax.swing.JComboBox combo_hari;
     private javax.swing.JComboBox combo_jam;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

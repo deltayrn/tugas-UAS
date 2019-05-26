@@ -10,12 +10,41 @@ package tiketbioskop;
  * @author Fani Salamah
  */
 public class PilihTempat extends javax.swing.JFrame {
+    int selectedFilm;
+    int selectedTime;
 
     /**
      * Creates new form PilihTempat
      */
-    public PilihTempat() {
+    public PilihTempat(int film, int jam) {
         initComponents();
+        this.selectedFilm = film;
+        this.selectedTime = jam;
+        
+        seat1.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(0).getName());
+        seat2.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(1).getName());
+        seat3.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(2).getName());
+        seat4.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(3).getName());
+        seat5.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(4).getName());
+        seat6.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(5).getName());
+        seat7.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(6).getName());
+        seat8.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(7).getName());
+        seat9.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(8).getName());
+        seat10.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(9).getName());
+        seat11.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(10).getName());
+        seat12.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(11).getName());
+        seat13.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(12).getName());
+        seat14.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(13).getName());
+        seat15.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(14).getName());
+        seat16.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(15).getName());
+        seat17.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(16).getName());
+        seat18.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(17).getName());
+        seat19.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(18).getName());
+        seat20.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(19).getName());
+        seat21.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(20).getName());
+        seat22.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(21).getName());
+        seat23.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(22).getName());
+        seat24.setText(TiketBioskop.filmList.get(film).timeList.get(jam).seatList.get(23).getName());
     }
 
     /**
@@ -28,86 +57,40 @@ public class PilihTempat extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        A1 = new javax.swing.JButton();
-        A2 = new javax.swing.JButton();
-        A3 = new javax.swing.JButton();
-        A6 = new javax.swing.JButton();
-        A4 = new javax.swing.JButton();
-        A5 = new javax.swing.JButton();
-        B3 = new javax.swing.JButton();
-        B6 = new javax.swing.JButton();
-        B4 = new javax.swing.JButton();
-        B5 = new javax.swing.JButton();
-        B1 = new javax.swing.JButton();
-        B2 = new javax.swing.JButton();
-        C3 = new javax.swing.JButton();
-        C6 = new javax.swing.JButton();
-        C4 = new javax.swing.JButton();
-        C5 = new javax.swing.JButton();
-        C1 = new javax.swing.JButton();
-        C2 = new javax.swing.JButton();
-        D3 = new javax.swing.JButton();
-        D6 = new javax.swing.JButton();
-        D4 = new javax.swing.JButton();
-        D5 = new javax.swing.JButton();
-        D1 = new javax.swing.JButton();
-        D2 = new javax.swing.JButton();
         btnd_next = new javax.swing.JButton();
         btnd_cancel = new javax.swing.JButton();
+        seat1 = new javax.swing.JToggleButton();
+        seat2 = new javax.swing.JToggleButton();
+        seat3 = new javax.swing.JToggleButton();
+        seat4 = new javax.swing.JToggleButton();
+        seat5 = new javax.swing.JToggleButton();
+        seat6 = new javax.swing.JToggleButton();
+        seat7 = new javax.swing.JToggleButton();
+        seat8 = new javax.swing.JToggleButton();
+        seat9 = new javax.swing.JToggleButton();
+        seat10 = new javax.swing.JToggleButton();
+        seat11 = new javax.swing.JToggleButton();
+        seat12 = new javax.swing.JToggleButton();
+        seat13 = new javax.swing.JToggleButton();
+        seat14 = new javax.swing.JToggleButton();
+        seat15 = new javax.swing.JToggleButton();
+        seat16 = new javax.swing.JToggleButton();
+        seat17 = new javax.swing.JToggleButton();
+        seat18 = new javax.swing.JToggleButton();
+        seat19 = new javax.swing.JToggleButton();
+        seat20 = new javax.swing.JToggleButton();
+        seat21 = new javax.swing.JToggleButton();
+        seat22 = new javax.swing.JToggleButton();
+        seat23 = new javax.swing.JToggleButton();
+        seat24 = new javax.swing.JToggleButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 500));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PILIH TEMPAT DUDUK");
-
-        A1.setText("A1");
-
-        A2.setText("A2");
-
-        A3.setText("A3");
-
-        A6.setText("A6");
-
-        A4.setText("A4");
-
-        A5.setText("A5");
-
-        B3.setText("B3");
-
-        B6.setText("B6");
-
-        B4.setText("B4");
-
-        B5.setText("B5");
-
-        B1.setText("B1");
-
-        B2.setText("B2");
-
-        C3.setText("C3");
-
-        C6.setText("C6");
-
-        C4.setText("C4");
-
-        C5.setText("C5");
-
-        C1.setText("C1");
-
-        C2.setText("C2");
-
-        D3.setText("D3");
-
-        D6.setText("D6");
-
-        D4.setText("D4");
-
-        D5.setText("D5");
-
-        D1.setText("D1");
-
-        D2.setText("D2");
 
         btnd_next.setText("NEXT");
         btnd_next.addActionListener(new java.awt.event.ActionListener() {
@@ -123,79 +106,167 @@ public class PilihTempat extends javax.swing.JFrame {
             }
         });
 
+        seat1.setMaximumSize(new java.awt.Dimension(60, 30));
+        seat1.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat1.setPreferredSize(new java.awt.Dimension(60, 30));
+
+        seat2.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat2.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat2.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat3.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat3.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat3.setPreferredSize(new java.awt.Dimension(65, 35));
+
+        seat4.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat4.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat4.setPreferredSize(new java.awt.Dimension(65, 35));
+
+        seat5.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat5.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat5.setPreferredSize(new java.awt.Dimension(65, 33));
+
+        seat6.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat6.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat6.setPreferredSize(new java.awt.Dimension(65, 33));
+
+        seat7.setMaximumSize(new java.awt.Dimension(65, 35));
+        seat7.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat7.setPreferredSize(new java.awt.Dimension(65, 35));
+
+        seat8.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat8.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat8.setPreferredSize(new java.awt.Dimension(45, 23));
+        seat8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seat8ActionPerformed(evt);
+            }
+        });
+
+        seat9.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat9.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat9.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat10.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat10.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat10.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat11.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat11.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat11.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat12.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat12.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat12.setPreferredSize(new java.awt.Dimension(65, 33));
+
+        seat13.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat13.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat13.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat14.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat14.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat14.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat15.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat15.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat15.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat16.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat16.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat16.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat17.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat17.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat17.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat18.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat18.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat18.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat19.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat19.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat19.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat20.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat20.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat20.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat21.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat21.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat21.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat22.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat22.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat22.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat23.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat23.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat23.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        seat24.setMaximumSize(new java.awt.Dimension(45, 23));
+        seat24.setMinimumSize(new java.awt.Dimension(45, 23));
+        seat24.setPreferredSize(new java.awt.Dimension(45, 23));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("SCREEN");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                .addGap(57, 57, 57))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(A1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(A2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(A3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(B1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(B2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(B3)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(C1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(C2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(C3)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(D1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(D2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(D3)))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(A4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(A5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(A6))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(B4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(B5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(B6)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(C4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(C5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(C6)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(D4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(D5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(D6)))
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnd_cancel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnd_next, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(seat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(seat14, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                                    .addComponent(seat20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(seat21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(seat4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(seat10, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                                    .addComponent(seat16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(seat22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(seat5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seat11, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(seat17, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(seat23, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(seat24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(seat18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(seat12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(seat6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
+                .addGap(57, 57, 57))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,38 +274,43 @@ public class PilihTempat extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(A6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(B1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(C1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(C6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(D1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(D2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(D3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(D4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(D5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(D6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(seat2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(seat3, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(seat4, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(seat5, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(seat6, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(seat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(seat9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seat10, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seat11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(seat12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(seat7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(seat8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(seat14, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(seat15, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(seat17, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(seat18, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(seat16, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(seat13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(seat22, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seat24, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seat23, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seat19, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seat21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seat20, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnd_next)
                     .addComponent(btnd_cancel))
@@ -253,6 +329,10 @@ public class PilihTempat extends javax.swing.JFrame {
         this.setVisible(false);
         new CetakTiket().setVisible(true);
     }//GEN-LAST:event_btnd_cancelActionPerformed
+
+    private void seat8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seat8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seat8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,38 +364,39 @@ public class PilihTempat extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PilihTempat().setVisible(true);
+                new PilihTempat(0, 0).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton A1;
-    private javax.swing.JButton A2;
-    private javax.swing.JButton A3;
-    private javax.swing.JButton A4;
-    private javax.swing.JButton A5;
-    private javax.swing.JButton A6;
-    private javax.swing.JButton B1;
-    private javax.swing.JButton B2;
-    private javax.swing.JButton B3;
-    private javax.swing.JButton B4;
-    private javax.swing.JButton B5;
-    private javax.swing.JButton B6;
-    private javax.swing.JButton C1;
-    private javax.swing.JButton C2;
-    private javax.swing.JButton C3;
-    private javax.swing.JButton C4;
-    private javax.swing.JButton C5;
-    private javax.swing.JButton C6;
-    private javax.swing.JButton D1;
-    private javax.swing.JButton D2;
-    private javax.swing.JButton D3;
-    private javax.swing.JButton D4;
-    private javax.swing.JButton D5;
-    private javax.swing.JButton D6;
     private javax.swing.JButton btnd_cancel;
     private javax.swing.JButton btnd_next;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JToggleButton seat1;
+    private javax.swing.JToggleButton seat10;
+    private javax.swing.JToggleButton seat11;
+    private javax.swing.JToggleButton seat12;
+    private javax.swing.JToggleButton seat13;
+    private javax.swing.JToggleButton seat14;
+    private javax.swing.JToggleButton seat15;
+    private javax.swing.JToggleButton seat16;
+    private javax.swing.JToggleButton seat17;
+    private javax.swing.JToggleButton seat18;
+    private javax.swing.JToggleButton seat19;
+    private javax.swing.JToggleButton seat2;
+    private javax.swing.JToggleButton seat20;
+    private javax.swing.JToggleButton seat21;
+    private javax.swing.JToggleButton seat22;
+    private javax.swing.JToggleButton seat23;
+    private javax.swing.JToggleButton seat24;
+    private javax.swing.JToggleButton seat3;
+    private javax.swing.JToggleButton seat4;
+    private javax.swing.JToggleButton seat5;
+    private javax.swing.JToggleButton seat6;
+    private javax.swing.JToggleButton seat7;
+    private javax.swing.JToggleButton seat8;
+    private javax.swing.JToggleButton seat9;
     // End of variables declaration//GEN-END:variables
 }
