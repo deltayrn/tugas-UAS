@@ -136,15 +136,15 @@ public class FrameTiketBioskop extends javax.swing.JFrame {
     }//GEN-LAST:event_btnf_closeActionPerformed
 
     private void btn_film_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_film_fourActionPerformed
-        this.pilihJam(5);
+        this.pilihJam(3);
     }//GEN-LAST:event_btn_film_fourActionPerformed
 
     private void btn_film_sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_film_sixActionPerformed
-        this.pilihJam(4);
+        this.pilihJam(5);
     }//GEN-LAST:event_btn_film_sixActionPerformed
 
     private void btn_film_fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_film_fiveActionPerformed
-        this.pilihJam(3);
+        this.pilihJam(4);
     }//GEN-LAST:event_btn_film_fiveActionPerformed
 
     private void btn_film_threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_film_threeActionPerformed

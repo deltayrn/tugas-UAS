@@ -12,7 +12,9 @@ import java.util.ArrayList;
  * @author Fani Salamah
  */
 public class TiketBioskop {
-    public static ArrayList<Film> filmList = new ArrayList<Film>();
+    public static ArrayList<Film> filmList = new ArrayList<>();
+    public static ArrayList<Transaksi> transaksi = new ArrayList<>();
+
     /**
      * @param args the command line arguments
      */

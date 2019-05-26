@@ -83,6 +83,13 @@ class Film {
     }
 }
 
+class Transaksi {
+    public LocalDateTime time;
+    public String filmName;
+    public String showTime;
+    public ArrayList<String> seats;
+}
+
 /**
  *
  * @author DELTA
